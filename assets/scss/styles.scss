@@ -11,6 +11,14 @@ $color-secondary : #333333;
   color: $color-primary;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
 .fw-b {
   font-weight: 800;
 }
@@ -50,10 +58,10 @@ figcaption {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &::before {
-      content: url('../images/burger__menu.svg');
-      position: absolute;
+    .buger__menu {
+      position: fixed;
       left: 0px;
+      z-index: 1;
     }
   }
   ul {
@@ -70,14 +78,16 @@ figcaption {
     transition-duration: 0.3s;
     justify-content: space-around;
     color: white;
-    &::before {
-      content: 'X';
-      position: absolute;
-      top: 10px;
-      right: 20px;
-    }
+    z-index: 2;
     &.active {
+      position: fixed;
       left: 0px;
+    }
+    span.button__menu{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 40px;
     }
   }
   a {
@@ -265,6 +275,8 @@ figure {
   .présentation__of__article {
     position: relative;
     img {
+      margin: auto;
+      display: block;
       max-width: 100%;
     }
   }
@@ -300,3 +312,81 @@ button {
   margin: 0 auto;
   display: block;
 }
+
+
+@media screen and (min-width: 640px) {
+
+  .header nav::before {
+    content: none;
+  }
+  
+  .header ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: initial;
+    flex-direction: row;
+    a {
+      color: black;
+    }
+    &.active {
+      position: initial;
+      left: initial;
+    }
+  }
+  .button__menu {
+    display: none;
+  }
+
+  p, h3 {
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+  }
+  article{
+    max-width: 800px;
+    margin: 0 auto;
+    h1 {
+      font-size: 22px;
+    }
+  }
+  .article_of_miss .interveiw {
+    width: 600px;
+  }
+  .choise_color_hair {
+    .container_img {
+      display: flex;
+    }
+    .container_img > img {
+      max-height: 300px;
+      width: initial;
+      margin: auto;
+      display: block;
+    }
+  }
+  .color__choises {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .color__choise {
+    width: 300px;   
+  }
+  .color__choise__bloc {
+    height: 238px;
+  }
+
+  .breadcrumb {
+    height: 30px;
+    ul {
+      flex-direction: row;
+      max-width: 600px;
+    }
+    li {
+      font-size: 10px;
+    }
+  }
+}
+

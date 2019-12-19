@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"id":"assets/images/burger__menu.svg","dependencies":[{"name":"/Users/hetic/Desktop/dev/seo/package.json","includedInParent":true,"mtime":1576773533129}],"generated":{"js":"module.exports = \"/7fe82bae6a5c040b6e8511e36ca2a643.svg\";"},"sourceMaps":null,"error":null,"hash":"cb524ed75be5065fc9f5fc7fcdc6958f","cacheData":{"env":{}}}
+=======
+{"id":"assets/images/burger__menu.svg","dependencies":[{"name":"/Users/hetic/Desktop/dev/seo/package.json","includedInParent":true,"mtime":1576773054030}],"generated":{"js":"module.exports = \"/7fe82bae6a5c040b6e8511e36ca2a643.svg\";"},"sourceMaps":null,"error":null,"hash":"cb524ed75be5065fc9f5fc7fcdc6958f","cacheData":{"env":{}}}
+>>>>>>> cheik

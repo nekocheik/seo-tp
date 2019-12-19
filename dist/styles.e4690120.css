@@ -649,6 +649,8 @@ figure {
   position: relative;
 }
 .home__page .présentation__of__article img {
+  margin: auto;
+  display: block;
   max-width: 100%;
 }
 .home__page h3 {
@@ -680,6 +682,78 @@ button {
   text-transform: uppercase;
   margin: 0 auto;
   display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .header nav::before {
+    content: none;
+  }
+
+  .header ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: initial;
+    flex-direction: row;
+  }
+  .header ul a {
+    color: black;
+  }
+
+  p, h3 {
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  article h1 {
+    font-size: 22px;
+  }
+
+  .article_of_miss .interveiw {
+    width: 600px;
+  }
+
+  .choise_color_hair .container_img {
+    display: flex;
+  }
+  .choise_color_hair .container_img > img {
+    max-height: 300px;
+    width: initial;
+    margin: auto;
+    display: block;
+  }
+
+  .color__choises {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .color__choise {
+    width: 300px;
+  }
+
+  .color__choise__bloc {
+    height: 238px;
+  }
+
+  .breadcrumb {
+    height: 30px;
+  }
+  .breadcrumb ul {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .breadcrumb li {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=/styles.e4690120.css.map */

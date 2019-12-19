@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"id":"assets/fonts/AvenirLTStd-Book.woff","dependencies":[{"name":"/Users/hetic/Desktop/dev/seo/package.json","includedInParent":true,"mtime":1576773533129}],"generated":{"js":"module.exports = \"/9b04a04b07b1eb8993ca59132ea274df.woff\";"},"sourceMaps":null,"error":null,"hash":"0759fc0bf0cabbc5449a0277a2e37891","cacheData":{"env":{}}}
-=======
-{"id":"assets/fonts/AvenirLTStd-Book.woff","dependencies":[{"name":"/Users/hetic/Desktop/dev/seo/package.json","includedInParent":true,"mtime":1576773054030}],"generated":{"js":"module.exports = \"/9b04a04b07b1eb8993ca59132ea274df.woff\";"},"sourceMaps":null,"error":null,"hash":"0759fc0bf0cabbc5449a0277a2e37891","cacheData":{"env":{}}}
->>>>>>> cheik

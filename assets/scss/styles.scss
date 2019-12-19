@@ -11,6 +11,10 @@ $color-secondary : #333333;
   color: $color-primary;
 }
 
+a {
+  text-decoration: none;
+}
+
 .fw-b {
   font-weight: 800;
 }
@@ -51,8 +55,9 @@ figcaption {
     justify-content: center;
     align-items: center;
     .buger__menu {
-      position: absolute;
-      left: 10px;
+      position: fixed;
+      left: 0px;
+      z-index: 1;
     }
   }
   ul {
@@ -69,14 +74,16 @@ figcaption {
     transition-duration: 0.3s;
     justify-content: space-around;
     color: white;
-    &::before {
-      content: 'X';
-      position: absolute;
-      top: 10px;
-      right: 20px;
-    }
+    z-index: 2;
     &.active {
+      position: fixed;
       left: 0px;
+    }
+    span.button__menu{
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 40px;
     }
   }
   a {
@@ -319,6 +326,13 @@ button {
     a {
       color: black;
     }
+    &.active {
+      position: initial;
+      left: initial;
+    }
+  }
+  .button__menu {
+    display: none;
   }
 
   p, h3 {

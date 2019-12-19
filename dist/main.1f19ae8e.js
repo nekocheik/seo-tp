@@ -117,89 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"assets/scss/reset.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"assets/fonts/stylesheet.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./AvenirLTStd-Medium.woff2":[["AvenirLTStd-Medium.17c4104f.woff2","assets/fonts/AvenirLTStd-Medium.woff2"],"assets/fonts/AvenirLTStd-Medium.woff2"],"./AvenirLTStd-Medium.woff":[["AvenirLTStd-Medium.0db91e95.woff","assets/fonts/AvenirLTStd-Medium.woff"],"assets/fonts/AvenirLTStd-Medium.woff"],"./AvenirLTStd-Book.woff2":[["AvenirLTStd-Book.a9fc7bc7.woff2","assets/fonts/AvenirLTStd-Book.woff2"],"assets/fonts/AvenirLTStd-Book.woff2"],"./AvenirLTStd-Book.woff":[["AvenirLTStd-Book.2ea274df.woff","assets/fonts/AvenirLTStd-Book.woff"],"assets/fonts/AvenirLTStd-Book.woff"],"./AvenirLTStd-Roman.woff2":[["AvenirLTStd-Roman.056d4249.woff2","assets/fonts/AvenirLTStd-Roman.woff2"],"assets/fonts/AvenirLTStd-Roman.woff2"],"./AvenirLTStd-Roman.woff":[["AvenirLTStd-Roman.64b76906.woff","assets/fonts/AvenirLTStd-Roman.woff"],"assets/fonts/AvenirLTStd-Roman.woff"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"assets/scss/styles.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./reset.css":"assets/scss/reset.css","../fonts/stylesheet.css":"assets/fonts/stylesheet.css","_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"main.js":[function(require,module,exports) {
+var buttons = document.querySelectorAll('.button__menu');
+var menu = document.querySelector('nav ul');
+buttons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    console.log('olk');
+    menu.classList.toggle('active');
+  });
+});
+console.log(menu, buttons);
+},{}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -227,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54416" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60278" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -403,5 +331,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/styles.e4690120.js.map
+},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
+//# sourceMappingURL=/main.1f19ae8e.js.map

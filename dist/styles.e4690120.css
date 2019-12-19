@@ -398,6 +398,10 @@ textarea {
   color: #FFB2A9;
 }
 
+a {
+  text-decoration: none;
+}
+
 .fw-b {
   font-weight: 800;
 }
@@ -443,8 +447,9 @@ figcaption {
   align-items: center;
 }
 .header nav .buger__menu {
-  position: absolute;
-  left: 10px;
+  position: fixed;
+  left: 0px;
+  z-index: 1;
 }
 .header ul {
   top: 0px;
@@ -460,15 +465,17 @@ figcaption {
   transition-duration: 0.3s;
   justify-content: space-around;
   color: white;
-}
-.header ul::before {
-  content: "X";
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  z-index: 2;
 }
 .header ul.active {
+  position: fixed;
   left: 0px;
+}
+.header ul span.button__menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
 }
 .header a {
   color: white;
@@ -698,6 +705,14 @@ button {
   }
   .header ul a {
     color: black;
+  }
+  .header ul.active {
+    position: initial;
+    left: initial;
+  }
+
+  .button__menu {
+    display: none;
   }
 
   p, h3 {

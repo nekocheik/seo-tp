@@ -50,10 +50,9 @@ figcaption {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &::before {
-      content: url('../images/burger__menu.svg');
+    .buger__menu {
       position: absolute;
-      left: 0px;
+      left: 10px;
     }
   }
   ul {

@@ -442,10 +442,9 @@ figcaption {
   justify-content: center;
   align-items: center;
 }
-.header nav::before {
-  content: url("/burger__menu.6ca2a643.svg");
+.header nav .buger__menu {
   position: absolute;
-  left: 0px;
+  left: 10px;
 }
 .header ul {
   top: 0px;

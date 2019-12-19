@@ -11,6 +11,10 @@ $color-secondary : #333333;
   color: $color-primary;
 }
 
+.upper {
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
 }
@@ -385,3 +389,4 @@ button {
     }
   }
 }
+
